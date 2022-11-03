@@ -1,32 +1,32 @@
 <!DOCTYPE html>
+<html lang="pt-br">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<html>
-   <head>
-      <title>Timestamp Microservice | freeCodeCamp.org</title>
-      <link rel="shortcut icon" href="https://cdn.freecodecamp.org/universal/favicons/favicon-32x32.png" type="image/x-icon"/>
-      <link href="https://fonts.googleapis.com/css?family=Roboto" rel="stylesheet" type="text/css">
-      <link href="style.css" rel="stylesheet" type="text/css">
-   </head>
+  <script src="https://cdn.tailwindcss.com"></script>
 
-   <body>
-    <h1>Timestamp Microservice</h1>
-    <hr />
-    <div class="container">
-      <h3>Example Usage:</h3>
-      <ul>
-        <li><a href="api/2015-12-25">[project url]/api/2015-12-25</a></li>
-        <li><a href="api/1451001600000">[project url]/api/1451001600000</a></li>
-      </ul>
-
-      <h3>Example Output:</h3>
-      <p>
-        <code>{"unix":1451001600000, "utc":"Fri, 25 Dec 2015 00:00:00 GMT"}</code>
-      </p>
+  <title>TimeStamp API</title>
+</head>
+<body class="bg-gray-300 px-4 flex flex-col">
+  <div class="">
+    <div class="flex flex-col mx-auto">
+      <span class="text-6xl font-semibold mx-auto">TimeStamp API</span>
+      <span class="text-xl mx-auto">by <a class="hover:text-purple-400" href="www.github.com/Ruaneves">dotRuan</a></span>
     </div>
-    <div class="footer">
-      <p>
-        By <a href="https://www.freecodecamp.org/">freeCodeCamp.org</a>
-      </p>
+  </div>
+  <span class="w-full mt-2 h-1 bg-purple-400"></span>
+
+  <div class="text-center">
+    <div class="flex flex-col">
+      <span class="text-2xl font-semibold">Exemplos de Como Usar:</span>
+      <br>
+      <code class="bg-white w-fit mx-auto">GET <span class="text-yellow-400">{URL}</span>/api/<span class="text-yellow-400">{Código ERA UNIX ou Data}</span></code>  
+      <code class="bg-white w-fit mx-auto">GET {URL}/api/{Código ERA UNIX ou Data}</code>  
+      <code class="bg-white w-fit mx-auto">GET {URL}/api/{Código ERA UNIX ou Data}</code>  
     </div>
-  </body>
+  </div>
+</body>
+
 </html>
