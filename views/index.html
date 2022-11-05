@@ -6,25 +6,55 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
   <script src="https://cdn.tailwindcss.com"></script>
-
+  <script src="/request.js"></script>
   <title>TimeStamp API</title>
 </head>
-<body class="bg-gray-300 px-4 flex flex-col">
+<body class="bg-gray-300 px-4 flex flex-col pb-4">
   <div class="">
-    <div class="flex flex-col mx-auto">
+    <div class="flex flex-col mx-auto p-4">
       <span class="text-6xl font-semibold mx-auto">TimeStamp API</span>
-      <span class="text-xl mx-auto">by <a class="hover:text-purple-400" href="www.github.com/Ruaneves">dotRuan</a></span>
     </div>
   </div>
-  <span class="w-full mt-2 h-1 bg-purple-400"></span>
+  <span class="w-full mt-2 h-1 bg-black"></span>
 
-  <div class="text-center">
+  <div class="text-center mt-8 space-y-8">
     <div class="flex flex-col">
-      <span class="text-2xl font-semibold">Exemplos de Como Usar:</span>
-      <br>
-      <code class="bg-white w-fit mx-auto">GET <span class="text-yellow-400">{URL}</span>/api/<span class="text-yellow-400">{Código ERA UNIX ou Data}</span></code>  
-      <code class="bg-white w-fit mx-auto">GET {URL}/api/{Código ERA UNIX ou Data}</code>  
-      <code class="bg-white w-fit mx-auto">GET {URL}/api/{Código ERA UNIX ou Data}</code>  
+      <span class="text-2xl font-semibold mb-4">Como Usar:</span>
+      <ul class="flex flex-col space-y-2">
+        <code class="bg-white w-fit mx-auto font-semibold"><span class="text-red-400">GET</span> <span class="text-purple-400">{URL}</span>/api/<span class="text-purple-400">{Código ERA UNIX ou Data}</span></code>  
+        <code class="bg-white w-fit mx-auto font-semibold"><span class="text-red-400">GET</span> <span class="text-purple-400">{URL}</span>/api/</code>  
+      </ul>
+    </div>
+    <div class="flex flex-col">
+      <span class="text-2xl font-semibold mb-4">Exemplos:</span>
+      <ul class="flex flex-col space-y-2">
+        <a href="/api/1451001600000">
+          <code class="bg-white w-fit mx-auto font-semibold hover:bg-gray-100"><span class="text-purple-400">{URL}</span>/api/<span class="text-purple-400">1451001600000</span></code>
+        </a>
+        <a href="/api/2015-12-25">
+          <code class="bg-white w-fit mx-auto font-semibold hover:bg-gray-100"><span class="text-purple-400">{URL}</span>/api/<span class="text-purple-400">2015-12-25</span></code>
+        </a>
+        <a href="/api/">
+          <code class="bg-white w-fit mx-auto font-semibold hover:bg-gray-100"><span class="text-purple-400">{URL}</span>/api/</code>
+        </a>
+      </ul>
+    </div>
+    <div class="flex flex-col">
+      <span class="text-2xl font-semibold mb-4">Exemplo de Retorno:</span>
+      <ul class="flex flex-col space-y-2">
+        <code class="bg-white w-fit mx-auto p-2 text-left font-semibold">
+          <span class="text-red-400">{</span><br>
+            <span class="text-purple-400">"unix"</span>: 1451001600000,<br>
+            <span class="text-purple-400">"utc"</span>: "Fri, 25 Dec 2015 00:00:00 GMT"<br>
+          <span class="text-red-400">}</span><br>
+        </code>
+        <code class="bg-white w-fit mx-auto p-2 text-left font-semibold" id="now">
+          <span class="text-red-400">{</span><br>
+            <span class="text-purple-400">"unix"</span>: <span id="unix"></span>,<br>
+            <span class="text-purple-400">"utc"</span>: "<span id="utc"></span>"<br>
+          <span class="text-red-400">}</span><br>
+        </code>
+      </ul> 
     </div>
   </div>
 </body>
